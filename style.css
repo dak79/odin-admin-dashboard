@@ -6,11 +6,16 @@
 }
 
 /* Layout */
+
+
+
 main {
+    height: 100vh;
+    width: 100vw;
     display: grid;
     grid: 
         [row1-start] "sidebar header" 1fr [row1-end]
-        [row2-start] "sidebar dashboard" 7fr [row2-end]
+        [row2-start] "sidebar dashboard" 4fr [row2-end]
     / 1fr 4fr;
 }
 
@@ -21,6 +26,7 @@ header {
         [row1-start] "search user-info" 1fr [row1-end]
         [row2-start] "user-name header-btn" 1fr [row2-end]
     / 3fr 1fr;
+    gap: 15px
 }
 
 header div.form-control {
@@ -39,16 +45,14 @@ header div.header-btn {
     grid-area: header-btn;
 }
 
-
 aside {
     grid-area: sidebar;
     display: grid;
     grid:
-        [row1-start] "logo" 1fr [row1-end]
-        [row2-start] "menu-one" 2fr [row2-end]
-        [row3-start] "menu-two" 10fr [row3-end] 
-    / 1fr;
-    
+        [row1-start] "logo" 0.2fr [row1-end]
+        [row2-start] "menu-one" 0.5fr [row2-end]
+        [row3-start] "menu-two" 2fr [row3-end] 
+    / 1fr;  
 }
 
 aside div.logo {
@@ -65,6 +69,23 @@ aside ul.menu-two {
 
 section.main-dashboard {
     grid-area: dashboard;
+    display: grid;
+    grid:
+        [row1-start] "projects announcements" 1fr [row1-end]
+        [row2-start] "projects trending" 1fr [row2-end]
+    / 2fr 1fr;
+}
+
+section.main-dashboard section.projects {
+    grid-area: projects;
+}
+
+section.main-dashboard section.announcements {
+    grid-area: announcements;
+}
+
+section.main-dashboard section.trending {
+    grid-area: trending;
 }
 
 /* Temporary settings*/
