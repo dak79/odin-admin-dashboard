@@ -16,6 +16,27 @@ main {
 
 header {
     grid-area: header;
+    display: grid;
+    grid: 
+        [row1-start] "search user-info" 1fr [row1-end]
+        [row2-start] "user-name header-btn" 1fr [row2-end]
+    / 3fr 1fr;
+}
+
+header div.form-control {
+    grid-area: search;
+}
+
+header div.user-info {
+    grid-area: user-info;
+}
+
+header div.user-name {
+    grid-area: user-name;
+}
+
+header div.header-btn {
+    grid-area: header-btn;
 }
 
 
