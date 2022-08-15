@@ -5,3 +5,21 @@
     box-sizing: border-box;
 }
 
+/* Temporary settings*/
+header,
+aside,
+section.main-dashboard {
+    border: 1px solid black;
+}
+
+header {
+    background-color: aquamarine;
+}
+
+aside {
+    background-color: azure;
+}
+
+section.main-dashboard {
+    background-color: bisque;
+}
