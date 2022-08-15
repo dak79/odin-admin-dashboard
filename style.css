@@ -9,8 +9,8 @@
 main {
     display: grid;
     grid: 
-    [row1-start] "sidebar header" 1fr [row1-end]
-    [row2-start] "sidebar dashboard" 7fr [row2-end]
+        [row1-start] "sidebar header" 1fr [row1-end]
+        [row2-start] "sidebar dashboard" 7fr [row2-end]
     / 1fr 4fr;
 }
 
@@ -18,8 +18,28 @@ header {
     grid-area: header;
 }
 
+
 aside {
     grid-area: sidebar;
+    display: grid;
+    grid:
+        [row1-start] "logo" 1fr [row1-end]
+        [row2-start] "menu-one" 2fr [row2-end]
+        [row3-start] "menu-two" 10fr [row3-end] 
+    / 1fr;
+    
+}
+
+aside div.logo {
+    grid-area: logo;
+}
+
+aside ul.menu-one {
+    grid-area: menu-one;
+}
+
+aside ul.menu-two {
+    grid-area: menu-two;
 }
 
 section.main-dashboard {
