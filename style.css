@@ -88,6 +88,20 @@ section.main-dashboard section.trending {
     grid-area: trending;
 }
 
+/* Style */
+
+.img-small {
+    border-radius: 100px;
+    width: 25px;
+    height: auto;
+}
+
+.img-big {
+    border-radius: 100px;
+    width: 50px;
+    height: auto;
+}
+
 /* Temporary settings*/
 header,
 aside,
