@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 /* CSS Reset */
 * {
     margin: 0;
@@ -5,10 +7,23 @@
     box-sizing: border-box;
 }
 
+/* CSS Variables*/
+:root {
+    --white: #FFFFFF;
+    --grey: #E2E8F0;
+    --dark-grey: #636363;
+    --blue: #1992D4;
+    --black: #000000;
+
+}
+
+/* Font */
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
 /* Layout */
-
-
-
 main {
     height: 100vh;
     width: 100vw;
@@ -19,6 +34,8 @@ main {
     / 1fr 4fr;
 }
 
+/* Header layout*/
+
 header {
     grid-area: header;
     display: grid;
@@ -26,25 +43,60 @@ header {
         [row1-start] "search user-info" 1fr [row1-end]
         [row2-start] "user-name header-btn" 1fr [row2-end]
     / 3fr 1fr;
-    gap: 15px
+    gap: 15px;
+
+    padding: 1rem;
 }
 
 header div.form-control {
     grid-area: search;
+    display: flex;
+    padding: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+label {
+    margin-right: 1rem;
+}
+
+input[type="search"] {
+    padding: 0.6rem;
+    flex: 1;
 }
 
 header div.user-info {
     grid-area: user-info;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.user-info img {
+    margin: 0 2rem;
 }
 
 header div.user-name {
     grid-area: user-name;
+    display: flex;
+    justify-items: center;
+    align-items: center;
 }
+
 
 header div.header-btn {
     grid-area: header-btn;
+    display: flex;
+    justify-items: center;
+    align-items: center;
 }
 
+header button {
+    margin: 1rem;
+    padding: 1rem 1.5rem;
+} 
+
+/* Sidebar layout */
 aside {
     grid-area: sidebar;
     display: grid;
@@ -90,28 +142,77 @@ section.main-dashboard section.trending {
 
 /* Style */
 
+/* Header style */
+
+header {
+    color: var(--black);
+    background-color: var(--white);
+}
+
+input[type="search"] {
+    max-width: 55rem;
+    border-radius: 15px;
+    border: none;
+
+    background-color: var(--grey);
+}
+
+header button {
+    color: var(--white);
+    background-color: var(--blue);
+    border: none;
+    border-radius: 25px;
+
+
+}
+
+
+/* Image dimensions */
+
 .img-small {
-    border-radius: 100px;
-    width: 25px;
-    height: auto;
+    width: 60px;
+    height: 60px;
 }
 
 .img-big {
-    border-radius: 100px;
-    width: 50px;
-    height: auto;
+    width: 80px;
+    height: 80px;
 }
 
+.text-small {
+    font-size: 0.8rem;
+    color: var(--dark-grey);
+}
+
+.text-small-b {
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.text-xsmall {
+    font-size: 0.6rem;
+}
+
+.text-big {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.text-medium {
+    font-size: 1.2rem;
+    font-weight: 700;  
+}
+
+
+
 /* Temporary settings*/
-header,
+
 aside,
 section.main-dashboard {
     border: 1px solid black;
 }
 
-header {
-    background-color: aquamarine;
-}
+
 
 aside {
     background-color: azure;
