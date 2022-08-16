@@ -14,7 +14,6 @@
     --dark-grey: #636363;
     --blue: #1992D4;
     --black: #000000;
-
 }
 
 /* Font */
@@ -30,7 +29,7 @@ main {
     grid: 
         [row1-start] "sidebar header" 1fr [row1-end]
         [row2-start] "sidebar dashboard" 4fr [row2-end]
-    / 1fr 4fr;
+    / 1fr 5fr;
 }
 
 /* Header layout*/
@@ -41,15 +40,13 @@ header {
         [row1-start] "search user-info" 1fr [row1-end]
         [row2-start] "user-name header-btn" 1fr [row2-end]
     / 3fr 1fr;
-    gap: 15px;
     padding: 1rem;
 }
 
 header div.form-control {
     grid-area: search;
     display: flex;
-    padding: 1rem;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
 }
 
@@ -76,14 +73,14 @@ div.user-info img {
 header div.user-name {
     grid-area: user-name;
     display: flex;
-    justify-items: center;
+    justify-content: flex-start;
     align-items: center;
 }
 
 header div.header-btn {
     grid-area: header-btn;
     display: flex;
-    justify-items: center;
+    justify-content: flex-start;
     align-items: center;
 }
 
@@ -101,14 +98,13 @@ aside {
         [row2-start] "menu-one" 0.5fr [row2-end]
         [row3-start] "menu-two" 2fr [row3-end] 
     / 1fr;  
-
     padding: 1.5rem;
 }
 
 aside div.logo {
     grid-area: logo;
     display: flex;
-    justify-items: center;
+    justify-content: flex-start;
     align-items: center;
 }
 
@@ -128,7 +124,7 @@ aside ul.menu-one,
 aside ul.menu-two {
     display: flex;
     flex-direction: column;
-    justify-items: center;
+    justify-content: center;
     align-items: flex-start;   
     margin: 1rem 0 3rem 0.5rem;
 }
@@ -137,12 +133,12 @@ aside ul.menu-one li,
 aside ul.menu-two li {
     margin: 1rem 0;
     display: flex;
+    justify-content: center;
     align-items: center;
-    justify-items: center;
 }
 
 .menu-text {
-    margin-left: 1rem;
+    margin-left: 1.2rem;
 }
 
 
@@ -239,14 +235,15 @@ aside ul {
     font-weight: 700;  
 }
 
+
+
+
+
+
 /* Temporary settings*/
-
-
 section.main-dashboard {
     border: 1px solid black;
 }
-
-
 
 section.main-dashboard {
     background-color: bisque;
