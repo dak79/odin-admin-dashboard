@@ -101,10 +101,19 @@ aside {
         [row2-start] "menu-one" 0.5fr [row2-end]
         [row3-start] "menu-two" 2fr [row3-end] 
     / 1fr;  
+
+    padding: 1.5rem;
 }
 
 aside div.logo {
     grid-area: logo;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+}
+
+aside h1 {
+    margin-left: 0.5rem;
 }
 
 aside ul.menu-one {
@@ -114,6 +123,28 @@ aside ul.menu-one {
 aside ul.menu-two {
     grid-area: menu-two;
 }
+
+aside ul.menu-one,
+aside ul.menu-two {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: flex-start;   
+    margin: 1rem 0 3rem 0.5rem;
+}
+
+aside ul.menu-one li,
+aside ul.menu-two li {
+    margin: 1rem 0;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+}
+
+.menu-text {
+    margin-left: 1rem;
+}
+
 
 section.main-dashboard {
     grid-area: dashboard;
@@ -158,6 +189,15 @@ header button {
     border-radius: 25px;
 }
 
+/* Sidebar style */
+aside {
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+aside ul {
+    list-style: none;
+}
 
 /* Image dimensions */
 .img-small {
@@ -186,7 +226,7 @@ header button {
 }
 
 .text-big {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 700;
 }
 
@@ -194,21 +234,19 @@ header button {
     font-size: 1.2rem;
     font-weight: 700;  
 }
-
-
+.text-medium-2 {
+    font-size: 1.1rem;
+    font-weight: 700;  
+}
 
 /* Temporary settings*/
 
-aside,
+
 section.main-dashboard {
     border: 1px solid black;
 }
 
 
-
-aside {
-    background-color: azure;
-}
 
 section.main-dashboard {
     background-color: bisque;
