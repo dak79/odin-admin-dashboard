@@ -18,7 +18,6 @@
 }
 
 /* Font */
-
 body {
     font-family: 'Roboto', sans-serif;
 }
@@ -35,7 +34,6 @@ main {
 }
 
 /* Header layout*/
-
 header {
     grid-area: header;
     display: grid;
@@ -44,7 +42,6 @@ header {
         [row2-start] "user-name header-btn" 1fr [row2-end]
     / 3fr 1fr;
     gap: 15px;
-
     padding: 1rem;
 }
 
@@ -82,7 +79,6 @@ header div.user-name {
     justify-items: center;
     align-items: center;
 }
-
 
 header div.header-btn {
     grid-area: header-btn;
@@ -143,7 +139,6 @@ section.main-dashboard section.trending {
 /* Style */
 
 /* Header style */
-
 header {
     color: var(--black);
     background-color: var(--white);
@@ -153,7 +148,6 @@ input[type="search"] {
     max-width: 55rem;
     border-radius: 15px;
     border: none;
-
     background-color: var(--grey);
 }
 
@@ -162,13 +156,10 @@ header button {
     background-color: var(--blue);
     border: none;
     border-radius: 25px;
-
-
 }
 
 
 /* Image dimensions */
-
 .img-small {
     width: 60px;
     height: 60px;
@@ -179,6 +170,7 @@ header button {
     height: 80px;
 }
 
+/* Font styling */
 .text-small {
     font-size: 0.8rem;
     color: var(--dark-grey);
