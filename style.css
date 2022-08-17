@@ -14,6 +14,8 @@
     --dark-grey: #636363;
     --blue: #1992D4;
     --black: #000000;
+
+    --shadow: 2px 2px 2px 3px rgba(0, 0, 0, 0.2);
 }
 
 /* Font */
@@ -27,8 +29,8 @@ main {
     width: 100vw;
     display: grid;
     grid: 
-        [row1-start] "sidebar header" 1fr [row1-end]
-        [row2-start] "sidebar dashboard" 4fr [row2-end]
+        [row1-start] "sidebar header" 180px [row1-end]
+        [row2-start] "sidebar dashboard" 1fr [row2-end]
     / 1fr 5fr;
 }
 
@@ -141,26 +143,44 @@ aside ul.menu-two li {
     margin-left: 1.2rem;
 }
 
-
+/* Main dashboard layout */
 section.main-dashboard {
     grid-area: dashboard;
     display: grid;
     grid:
-        [row1-start] "projects announcements" 1fr [row1-end]
-        [row2-start] "projects trending" 1fr [row2-end]
-    / 2fr 1fr;
+        [row1-start] "title-projects title-announcements" 30px [row1-end]
+        [row2-start] "projects announcements" 1fr [row2-end]
+        [row3-start] "projects title-trending" 30px [row3-end]
+        [row4-start] "projects trending" 1fr [row4-end]
+    / 3fr 1fr;
+
+    padding: 2rem 1rem;
 }
 
 section.main-dashboard section.projects {
     grid-area: projects;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+
+h2.title-projects {
+    grid-area: title-projects;
 }
 
 section.main-dashboard section.announcements {
     grid-area: announcements;
 }
 
+h2.title-announcements {
+    grid-area: title-announcements;
+}
+
 section.main-dashboard section.trending {
     grid-area: trending;
+}
+
+h2.title-trending {
+    grid-area: title-trending;
 }
 
 /* Style */
@@ -169,6 +189,7 @@ section.main-dashboard section.trending {
 header {
     color: var(--black);
     background-color: var(--white);
+    box-shadow: var(--shadow);
 }
 
 input[type="search"] {
@@ -193,6 +214,11 @@ aside {
 
 aside ul {
     list-style: none;
+}
+
+/* Section main dashboard style */
+section.main-dashboard {
+    background-color: var(--grey);
 }
 
 /* Image dimensions */
@@ -240,11 +266,3 @@ aside ul {
 
 
 
-/* Temporary settings*/
-section.main-dashboard {
-    border: 1px solid black;
-}
-
-section.main-dashboard {
-    background-color: bisque;
-}
