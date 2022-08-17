@@ -14,8 +14,8 @@
     --dark-grey: #636363;
     --blue: #1992D4;
     --black: #000000;
-
-    --shadow: 2px 2px 2px 3px rgba(0, 0, 0, 0.2);
+    --yellow: #F0B429;
+    --shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Font */
@@ -152,31 +152,98 @@ section.main-dashboard {
         [row2-start] "projects announcements" 1fr [row2-end]
         [row3-start] "projects title-trending" 30px [row3-end]
         [row4-start] "projects trending" 1fr [row4-end]
-    / 3fr 1fr;
-
-    padding: 2rem 1rem;
+    / 4fr 1fr;
+    gap: 20px;
+    padding: 1rem;
+    margin-right: 2rem;
 }
 
+/* Projects layout */
 section.main-dashboard section.projects {
     grid-area: projects;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    margin: 1rem 1rem 0 0;
+    gap: 20px; 
 }
 
 h2.title-projects {
     grid-area: title-projects;
+    padding: 1rem;
 }
 
+/* Articles layout */
+article.card {
+    padding: 1rem;
+    display: grid;
+    grid: 
+        [row1-start] "title" 1fr [row1-end]
+        [row2-start] "body" 2fr [row2-end]
+        [row3-start] "icons" 1fr [row3-end] 
+        / 1fr;
+    
+    gap: 10px;
+    justify-items: flex-start;
+    align-items: flex-start;
+}
+
+article.card h3 {
+    grid-area: title;
+    align-self: center;
+}
+
+article.card p {
+    grid-area: body;
+}
+
+article.card div {
+    grid-area: icons; 
+    align-self: center;
+    justify-self: flex-end;
+}
+
+/* Annoucements layout*/
 section.main-dashboard section.announcements {
     grid-area: announcements;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 1rem;
+}
+
+section.announcements.card {
+    margin: 1rem 0;
+}
+
+section.announcements p {
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
 }
 
 h2.title-announcements {
     grid-area: title-announcements;
+    margin-top: 1rem;
 }
 
+/* Trending layout */
 section.main-dashboard section.trending {
     grid-area: trending;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 15px;
+    
+    padding: 1rem;
+}
+
+.trending-user {
+    display: flex;
+    margin-bottom: 1rem;
+    justify-items: center;
+    align-items: center;
 }
 
 h2.title-trending {
@@ -185,11 +252,16 @@ h2.title-trending {
 
 /* Style */
 
+body {
+    background-color: var(--grey);
+}
+
 /* Header style */
 header {
     color: var(--black);
     background-color: var(--white);
     box-shadow: var(--shadow);
+    z-index: 1;
 }
 
 input[type="search"] {
@@ -221,10 +293,27 @@ section.main-dashboard {
     background-color: var(--grey);
 }
 
+/* Card style */
+.card {
+    background-color: var(--white);
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+}
+
+/* Articles border */
+article.card {
+    border-left: 10px solid var(--yellow);
+}
+
+/* Annoucement separation line */
+section.announcements p {
+    border-bottom: 1px solid var(--grey);
+}
+
 /* Image dimensions */
 .img-small {
-    width: 60px;
-    height: 60px;
+    width: 40px;
+    height: 40px;
 }
 
 .img-big {
@@ -260,9 +349,3 @@ section.main-dashboard {
     font-size: 1.1rem;
     font-weight: 700;  
 }
-
-
-
-
-
-
