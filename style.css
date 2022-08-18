@@ -9,12 +9,12 @@
 
 /* CSS Variables*/
 :root {
-    --white: #FFFFFF;
-    --grey: #E2E8F0;
-    --dark-grey: #636363;
-    --blue: #1992D4;
-    --black: #000000;
-    --yellow: #F0B429;
+    --slate-50: #f8fafc;
+    --slate-200: #e2e8f0;
+    --slate-500: #64748b;
+    --slate-700: #334155;
+    --slate-900: #0f172a;
+    --orange-500: #f97316;
     --shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -247,13 +247,13 @@ h2.title-trending {
 /* Style */
 
 body {
-    background-color: var(--grey);
+    background-color: var(--slate-200);
 }
 
 /* Header style */
 header {
-    color: var(--black);
-    background-color: var(--white);
+    color: var(--slate-900);
+    background-color: var(--slate-50);
     box-shadow: var(--shadow);
     z-index: 1;
 }
@@ -262,20 +262,20 @@ input[type="search"] {
     max-width: 55rem;
     border-radius: 15px;
     border: none;
-    background-color: var(--grey);
+    background-color: var(--slate-200);
 }
 
 header button {
-    color: var(--white);
-    background-color: var(--blue);
+    color: var(--slate-50);
+    background-color: var(--slate-700);
     border: none;
     border-radius: 25px;
 }
 
 /* Sidebar style */
 aside {
-    background-color: var(--blue);
-    color: var(--white);
+    background-color: var(--slate-700);
+    color: var(--slate-50);
 }
 
 aside ul {
@@ -284,24 +284,24 @@ aside ul {
 
 /* Section main dashboard style */
 section.main-dashboard {
-    background-color: var(--grey);
+    background-color: var(--slate-200);
 }
 
 /* Card style */
 .card {
-    background-color: var(--white);
+    background-color: var(--slate-50);
     border-radius: 15px;
     box-shadow: var(--shadow);
 }
 
 /* Articles border */
 article.card {
-    border-left: 10px solid var(--yellow);
+    border-left: 10px solid var(--orange-500);
 }
 
 /* Annoucement separation line */
 section.announcements p {
-    border-bottom: 1px solid var(--grey);
+    border-bottom: 1px solid var(--slate-200);
 }
 
 /* Image dimensions */
@@ -318,7 +318,7 @@ section.announcements p {
 /* Font styling */
 .text-small {
     font-size: 0.8rem;
-    color: var(--dark-grey);
+    color: var(--slate-500);
 }
 
 .text-small-b {
