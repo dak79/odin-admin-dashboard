@@ -45,11 +45,30 @@ header {
     padding: 1rem;
 }
 
-header div.form-control {
-    grid-area: search;
+header div.form-control,
+header div.user-info,
+header div.user-name,
+header div.header-btn {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+}
+
+header div.form-control {
+    grid-area: search;
+}
+
+header div.user-info {
+    grid-area: user-info;
+    justify-content: center;
+}
+
+header div.user-name {
+    grid-area: user-name;
+}
+
+header div.header-btn {
+    grid-area: header-btn;
 }
 
 label {
@@ -61,29 +80,8 @@ input[type="search"] {
     flex: 1;
 }
 
-header div.user-info {
-    grid-area: user-info;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 div.user-info img {
     margin: 0 2rem;
-}
-
-header div.user-name {
-    grid-area: user-name;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-}
-
-header div.header-btn {
-    grid-area: header-btn;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
 }
 
 header button {
@@ -114,14 +112,6 @@ aside h1 {
     margin-left: 0.5rem;
 }
 
-aside ul.menu-one {
-    grid-area: menu-one;
-}
-
-aside ul.menu-two {
-    grid-area: menu-two;
-}
-
 aside ul.menu-one,
 aside ul.menu-two {
     display: flex;
@@ -129,6 +119,14 @@ aside ul.menu-two {
     justify-content: center;
     align-items: flex-start;   
     margin: 1rem 0 3rem 0.5rem;
+}
+
+aside ul.menu-one {
+    grid-area: menu-one;
+}
+
+aside ul.menu-two {
+    grid-area: menu-two;
 }
 
 aside ul.menu-one li,
@@ -202,15 +200,23 @@ article.card div {
     justify-self: flex-end;
 }
 
-/* Annoucements layout*/
-section.main-dashboard section.announcements {
-    grid-area: announcements;
+/* Annoucements and Trending layout*/
+section.main-dashboard section.announcements,
+section.main-dashboard section.trending {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: flex-start;
     gap: 15px;
     padding: 1rem;
+}
+
+section.main-dashboard section.announcements{
+    grid-area: announcements;
+}
+
+section.main-dashboard section.trending {
+    grid-area: trending;
 }
 
 section.announcements.card {
@@ -225,17 +231,6 @@ section.announcements p {
 h2.title-announcements {
     grid-area: title-announcements;
     margin-top: 1rem;
-}
-
-/* Trending layout */
-section.main-dashboard section.trending {
-    grid-area: trending;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: flex-start;
-    gap: 15px;
-    padding: 1rem;
 }
 
 .trending-user {
@@ -331,10 +326,6 @@ section.announcements p {
     font-weight: 700;
 }
 
-.text-xsmall {
-    font-size: 0.6rem;
-}
-
 .text-big {
     font-size: 1.5rem;
     font-weight: 700;
@@ -342,9 +333,5 @@ section.announcements p {
 
 .text-medium {
     font-size: 1.2rem;
-    font-weight: 700;  
-}
-.text-medium-2 {
-    font-size: 1.1rem;
     font-weight: 700;  
 }
