@@ -278,6 +278,10 @@ aside {
     color: var(--slate-50);
 }
 
+.logo svg {
+    color: #f97316;
+}
+
 aside ul {
     list-style: none;
 }
