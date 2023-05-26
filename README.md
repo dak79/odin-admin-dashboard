@@ -7,7 +7,7 @@
 This project is part of [The Odin Project - Full Stack JavaScript Path](https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-admin-dashboard). 
 The main goal for this project is to use CSS Grid, so as layout choice I apply Grid almost everywhere even is some occasion when flexbox could be a reasonable choice.
 
-## Tecnologies
+## Technologies
 * HTML
 * CSS
 * Git
